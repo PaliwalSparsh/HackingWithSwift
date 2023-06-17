@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752A23432A3D3C3A001773D5 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752A23422A3D3C3A001773D5 /* ContentView2.swift */; };
 		75EF014E2A3AD425005D32CD /* SplitWiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EF014D2A3AD425005D32CD /* SplitWiseApp.swift */; };
 		75EF01502A3AD425005D32CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EF014F2A3AD425005D32CD /* ContentView.swift */; };
 		75EF01522A3AD427005D32CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EF01512A3AD427005D32CD /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		752A23422A3D3C3A001773D5 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		75EF014A2A3AD425005D32CD /* SplitWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75EF014D2A3AD425005D32CD /* SplitWiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWiseApp.swift; sourceTree = "<group>"; };
 		75EF014F2A3AD425005D32CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				75EF014D2A3AD425005D32CD /* SplitWiseApp.swift */,
 				75EF014F2A3AD425005D32CD /* ContentView.swift */,
+				752A23422A3D3C3A001773D5 /* ContentView2.swift */,
 				75EF01512A3AD427005D32CD /* Assets.xcassets */,
 				75EF01562A3AD427005D32CD /* SplitWise.entitlements */,
 				75EF01532A3AD427005D32CD /* Preview Content */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752A23432A3D3C3A001773D5 /* ContentView2.swift in Sources */,
 				75EF01502A3AD425005D32CD /* ContentView.swift in Sources */,
 				75EF014E2A3AD425005D32CD /* SplitWiseApp.swift in Sources */,
 			);

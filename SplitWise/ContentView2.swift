@@ -8,7 +8,7 @@
 import SwiftUI
 
 // 1. All of these View struct are called by SwiftUI as a constant. Thus, these are immutable structs, all @State properties are stored seperately in some other place in swift, where they are tracked for change and based on a update a new struct is created.
-struct ContentView: View {
+struct ContentView2: View {
     @State private var amount: Double = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
@@ -21,6 +21,11 @@ struct ContentView: View {
     
     private var amountPerPerson: Double {
         amount * (1 + Double(tipPercentage)/100) / Double(numberOfPeople + 2)
+    }
+    
+    // This is awesome we can also encapsulate formatters
+    private var currencyFormatter: FloatingPointFormatStyle<Double>.Currency {
+            return .currency(code: Locale.current.currency?.identifier ?? "USD")
     }
     
     let tipPercentages = [0, 10, 15, 20, 25]
@@ -40,23 +45,23 @@ struct ContentView: View {
                         }
                     }
                 }
+
                 Section {
                     Picker("Tip Amount", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(0..<101, id: \.self) {
                             Text($0, format: .percent)
                         }
-                    }.pickerStyle(.segmented)
+                    }.pickerStyle(.navigationLink)
                 } header: {
                     Text("How much tip would you like to give ?")
                 }
-
                 Section {
-                    Text(totalAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalAmount, format: currencyFormatter)
                 } header: {
                     Text("Total value of the check")
                 }
                 Section {
-                    Text(amountPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(amountPerPerson, format: currencyFormatter)
                 } header: {
                     Text("Amount Per Person")
                 }
@@ -74,8 +79,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView2_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView2()
     }
 }
