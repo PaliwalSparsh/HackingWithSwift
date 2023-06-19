@@ -11,6 +11,7 @@
 		759E9CEB2A40B3D60075169D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E9CEA2A40B3D60075169D /* ContentView.swift */; };
 		759E9CED2A40B3D70075169D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759E9CEC2A40B3D70075169D /* Assets.xcassets */; };
 		759E9CF02A40B3D70075169D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759E9CEF2A40B3D70075169D /* Preview Assets.xcassets */; };
+		759E9CF72A40D0C50075169D /* MultipleAlertTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E9CF62A40D0C50075169D /* MultipleAlertTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		759E9CEA2A40B3D60075169D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		759E9CEC2A40B3D70075169D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		759E9CEF2A40B3D70075169D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		759E9CF62A40D0C50075169D /* MultipleAlertTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleAlertTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				759E9CE82A40B3D60075169D /* flagGameApp.swift */,
 				759E9CEA2A40B3D60075169D /* ContentView.swift */,
+				759E9CF62A40D0C50075169D /* MultipleAlertTestView.swift */,
 				759E9CEC2A40B3D70075169D /* Assets.xcassets */,
 				759E9CEE2A40B3D70075169D /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759E9CF72A40D0C50075169D /* MultipleAlertTestView.swift in Sources */,
 				759E9CEB2A40B3D60075169D /* ContentView.swift in Sources */,
 				759E9CE92A40B3D60075169D /* flagGameApp.swift in Sources */,
 			);
