@@ -34,6 +34,8 @@ struct ContentView: View {
                         // 2. Rendering mode original use makes the image not turn into bluish tint that's ususally seen on buttons. ClipShape is used to clip shape. Duuuuhh..
                             .renderingMode(.original)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
+                        // 3. This is how you can add shadow and opacity, radius is essentailly how much blur we want and we also have x and y as args that can be passed to shadow.
+                            .shadow(color: .black.opacity(0.4), radius: 6)
                             
                     }
                 }
