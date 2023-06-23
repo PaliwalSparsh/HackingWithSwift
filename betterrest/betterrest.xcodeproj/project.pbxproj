@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		751264792A4544E7002595FF /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 751264782A4544E7002595FF /* SleepCalculator.mlmodel */; };
+		7524F5272A45FEC40044699E /* ContentView-v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524F5262A45FEC40044699E /* ContentView-v1.swift */; };
 		7525AE462A44BAB80074F5B6 /* betterrestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525AE452A44BAB80074F5B6 /* betterrestApp.swift */; };
 		7525AE482A44BAB80074F5B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525AE472A44BAB80074F5B6 /* ContentView.swift */; };
 		7525AE4A2A44BABA0074F5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7525AE492A44BABA0074F5B6 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		751264782A4544E7002595FF /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SleepCalculator.mlmodel; path = ../../SleepCalculator.mlmodel; sourceTree = "<group>"; };
+		7524F5262A45FEC40044699E /* ContentView-v1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-v1.swift"; sourceTree = "<group>"; };
 		7525AE422A44BAB80074F5B6 /* betterrest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = betterrest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7525AE452A44BAB80074F5B6 /* betterrestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = betterrestApp.swift; sourceTree = "<group>"; };
 		7525AE472A44BAB80074F5B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				7525AE452A44BAB80074F5B6 /* betterrestApp.swift */,
 				7525AE472A44BAB80074F5B6 /* ContentView.swift */,
+				7524F5262A45FEC40044699E /* ContentView-v1.swift */,
 				7525AE532A44BFFC0074F5B6 /* DatesAndMore.swift */,
 				751264782A4544E7002595FF /* SleepCalculator.mlmodel */,
 				7525AE492A44BABA0074F5B6 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				751264792A4544E7002595FF /* SleepCalculator.mlmodel in Sources */,
+				7524F5272A45FEC40044699E /* ContentView-v1.swift in Sources */,
 				7525AE482A44BAB80074F5B6 /* ContentView.swift in Sources */,
 				7525AE542A44BFFC0074F5B6 /* DatesAndMore.swift in Sources */,
 				7525AE462A44BAB80074F5B6 /* betterrestApp.swift in Sources */,
