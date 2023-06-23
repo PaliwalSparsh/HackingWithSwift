@@ -1,5 +1,8 @@
 //: [Previous](@previous)
 
+// 0. IMPORTANT: Static type belong to the type itself and not to any of its instance. When compiler goes through a Class/Struct code it first initialised all normal (also called instance) variable and properties, then initialised the static properties. And because static variable and methods are initialised later we can use the class itself in them(as you will see below). Often instance variables, are provided default value using static properties this is also made possible because static properties are already executed and when an object is created that static value is passed to the variable. So order is –> Instance Variable and propeties -> Static variable and properties [At this point we are ready in case someone needs to create an object from class/struct] -> Object creation.
+
+
 import Foundation
 
 var greeting = "Hello, playground"
