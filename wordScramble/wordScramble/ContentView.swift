@@ -22,7 +22,7 @@ struct ContentView: View {
                     TextField("Enter current word", text: $currentWord)
                         .textInputAutocapitalization(.never)
                 }
-                Section {
+                Section("Your score is \(wordList.reduce(0) { $0 + $1.count })") {
                     List(wordList, id: \.self) { word in
                         HStack {
                             Image(systemName: "\(word.count).circle")
@@ -38,6 +38,9 @@ struct ContentView: View {
             .onAppear(perform: startGame)
             .alert(errorTitle, isPresented: $showErrorAlert) {
                 Button("OK") {}
+            }
+            .toolbar {
+                Button("Restart", action: startGame)
             }
         }
     }
@@ -58,6 +61,10 @@ struct ContentView: View {
             showError(title: "This is not even a word, bro!!!")
             return
         }
+        guard isCreative(word: answer) else {
+            showError(title: "Increase number of letters & don't use the same master word")
+            return
+        }
         withAnimation {
             wordList.insert(answer, at: 0)
         }
@@ -69,12 +76,18 @@ struct ContentView: View {
             if let words = try? String(contentsOf: wordsURL) {
                 let allWords = words.components(separatedBy: "\n")
                 masterWord = allWords.randomElement() ?? "Silkworm"
+                wordList = [String]()
+                currentWord = ""
                 return
             }
         }
         
         /// 4. This error can be used to crash the whole app, here in the case start.txt is not loaded the whole app is crashed :(
         fatalError("Start.txt file is not being loaded.")
+    }
+    
+    func isCreative(word: String) -> Bool {
+        word.count > 3 && word != masterWord
     }
     
     func showError(title: String) {
