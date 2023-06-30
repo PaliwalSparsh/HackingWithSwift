@@ -8,27 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var animationAmount = 0.0
     var body: some View {
-        VStack {
-            Button("Hello") {
-                withAnimation(.spring()) {
-                    animationAmount += 360
-                }
-            }
-            .padding(100)
-            .background(Color(.systemMint), in: Circle())
-            .foregroundStyle(Color(.white))
-            .rotation3DEffect(.degrees(animationAmount), axis: (x:0, y:1, z:0))
-            
-            Text("other side")
-                .font(.title.bold())
-                .rotation3DEffect(.degrees(-animationAmount), axis: (x:0, y:1, z:0))
-                
-        }
-        .padding()
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
