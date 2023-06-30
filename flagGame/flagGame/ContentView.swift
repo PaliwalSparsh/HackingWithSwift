@@ -16,6 +16,9 @@ struct ContentView: View {
     @State private var rounds = 0
     @State private var showGameFinishAlert = false
     
+    @State private var selectedFlag = -1
+    @State private var isTapped = false
+    
     var body: some View {
         ZStack {
             LinearGradient(colors: [.mint, .black], startPoint: .top, endPoint: .bottom).ignoresSafeArea()
@@ -32,7 +35,15 @@ struct ContentView: View {
                 
                 ForEach(0..<3) { number in
                     Button {
-                        buttonTap(number: number)
+                        withAnimation(.easeInOut(duration: 0.4)) {
+                            selectedFlag = number
+                            isTapped = true
+                        }
+                        /// DispatchQueue helped us execute buttonTap once animation gets over.
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                buttonTap(number: number)
+                        }
+
                     } label: {
                         Image(countries[number])
                         // 2. Rendering mode original use makes the image not turn into bluish tint that's ususally seen on buttons. ClipShape is used to clip shape. Duuuuhh..
@@ -40,8 +51,11 @@ struct ContentView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                         // 3. This is how you can add shadow and opacity, radius is essentailly how much blur we want and we also have x and y as args that can be passed to shadow.
                             .shadow(color: .black.opacity(0.4), radius: 6)
-                            
                     }
+                    .scaleEffect(isTapped ? (number == selectedFlag ? 1.2 : 0.8) : 1)
+                    .opacity(isTapped ? (number == selectedFlag ? 1 : 0.6) : 1)
+                    .animation(.spring(), value: selectedFlag)
+                    .transition(.slide)
                 }
                 
                 VStack {
@@ -82,8 +96,9 @@ struct ContentView: View {
     }
     
     func startNextRound() {
-        countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        selectedFlag = -1
+        isTapped = false
     }
     
     func startNextGame() {
