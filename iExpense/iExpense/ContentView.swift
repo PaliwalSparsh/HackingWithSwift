@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+struct ListItem: View {
+    var item: Expense
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(item.name).font(.subheadline.bold())
+                Text(item.type)
+            }
+            Spacer()
+            Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                .foregroundStyle(item.amount > 10.0 ? item.amount > 100.0 ? .red : .orange : .green)
+        }
+    }
+}
+
 struct ContentView: View {
     // @StateObject is a property wrapper used to instantiate Observeable Object. When you are using class you cannot use @State because @State doesn't do a deep check on if all values of a class have changed. Thus, it works well for structs and primary datatypes such as numebrs and strings. Because they are recreated on reassignment.
     // Thus for classes we need to first create them as ObservableObject and inside them we need to define properties that should be looked for change using @Published wrapper.
@@ -18,17 +34,18 @@ struct ContentView: View {
         NavigationView {
             List {
                 /// Swift provides us a convinient delete function. However it come swith its own quirks. Delete function only works when you have a ForEach inside the list and you apply .onDelete modifier to that forEach.
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name).font(.subheadline.bold())
-                            Text(item.type)
-                        }
-                        Spacer()
-                        Text("\(item.amount.formatted())")
-                    }
-                    
-                }.onDelete(perform: removeItems)
+                
+                Section("Personal") {
+                    ForEach(expenses.items[..<expenses.firstBusinessTypeIndex]) { item in
+                        ListItem(item: item)
+                    }.onDelete(perform: removeItems)
+                }
+                
+                Section("Business") {
+                    ForEach(expenses.items[expenses.firstBusinessTypeIndex...]) { item in
+                        ListItem(item: item)
+                    }.onDelete(perform: removeItems)
+                }
             }
             .navigationTitle("iExpense")
             .toolbar {
