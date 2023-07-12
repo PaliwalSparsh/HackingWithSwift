@@ -27,14 +27,18 @@ struct AddView: View {
                         Text($0)
                     }
                 }
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
+                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button("Save") {
-                    expenses.items.append(Expense(name: name, type: type, amount: amount))
+                    if type == "Business" {
+                        expenses.items.append(Expense(name: name, type: type, amount: amount))
+                    } else {
+                        expenses.items.insert(Expense(name: name, type: type, amount: amount), at: 0)
+                    }
                     dismiss()
                 }
             }

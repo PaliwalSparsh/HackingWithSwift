@@ -17,6 +17,10 @@ class Expenses: ObservableObject {
         }
     }
     
+    var firstBusinessTypeIndex: Int {
+        items.firstIndex(where: { $0.type == "Business"}) ?? 0
+    }
+    
     init() {
         if let encodedData = UserDefaults.standard.data(forKey: "Items") {
             /// Through [Expense].self we are trying to say don't instantiate this, we are just trying to tell you the type we want the encodedData to be decoded to.
