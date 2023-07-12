@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct JarItem: Identifiable {
-    let id = UUID()
+struct JarItem: Identifiable, Codable {
+    var id = UUID()
     let amount: Double
     let date: Date
 }

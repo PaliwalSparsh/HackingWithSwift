@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct JarDetailView: View {
-    @ObservedObject var jar: Jar
+    var jar: Jar
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -35,7 +35,7 @@ struct JarDetailView: View {
 }
 
 struct JarView: View {
-    @StateObject var jar = Jar()
+    @State var jar = Jar()
     @State var showDetailsSheet = false
     let amount = [1.0, 2.0, 3.0]
     var body: some View {
