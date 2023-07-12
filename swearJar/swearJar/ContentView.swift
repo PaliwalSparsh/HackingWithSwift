@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Here when jar is passed to this view it's a copy of the struct, so we cannot change the original struct from here.
+/// If want to move the same object from one view to another our original data should be class :)
 struct JarDetailView: View {
     var jar: Jar
     @Environment(\.dismiss) var dismiss
