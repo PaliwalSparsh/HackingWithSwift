@@ -37,6 +37,7 @@ struct ContentView: View {
             }
             .background(.darkBackground)
             .navigationTitle("Moonshot")
+            /// We can force a particular color scheme on a view, this way all iOS elements such as nav bars and other stuff will turn light on dark based on what you define.
             .preferredColorScheme(.dark)
         }
     }
