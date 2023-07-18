@@ -17,23 +17,29 @@ struct ContentView: View {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))]) {
                     ForEach(missions) { mission in
                         NavigationLink {
-                            Text("Detail View")
+                            MissionView(mission: mission, astronauts: astronauts)
                         } label: {
                             VStack {
                                 Image(mission.image)
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 100)
-                                Text(mission.displayName)
-                                    .font(.subheadline.bold())
-                                Text(mission.launchDate ?? "N/A")
+                                    .frame(width: 100, height: 100)
+                                VStack {
+                                    Text(mission.displayName)
+                                        .font(.subheadline.bold())
+                                    Text(mission.launchDate ?? "N/A")
+                                }
+                                .frame(maxWidth: .infinity)
+
                             }
                             .padding()
-                            .background(.lightBackground)
                             .foregroundColor(.white)
+                            .background(.lightBackground)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
                         }
                     }
                 }
+                .padding(.horizontal)
             }
             .background(.darkBackground)
             .navigationTitle("Moonshot")
