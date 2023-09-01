@@ -65,7 +65,8 @@ struct CheckoutView: View {
             let decodedData = try JSONDecoder().decode(Order.self, from: data)
             alertMessage = "Your order for \(decodedData.quantity) cupcakes is done."
         } catch {
-            print("Checkout Failed")
+            showAlertMessage = true
+            alertMessage = "Request failed!"
         }
     }
 }

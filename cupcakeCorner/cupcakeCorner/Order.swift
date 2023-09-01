@@ -7,6 +7,12 @@
 
 import Foundation
 
+extension String {
+    var isEmptyConsideringWhitespaces: Bool {
+        return self.isEmpty || self.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+}
+
 /// For a class which has @Published properties in it, we cannot just directly add Codable and expect
 /// the class to be decoded and encoded automatically, instead we need to tell swift how the encoding and
 /// decoding will happen
@@ -39,7 +45,7 @@ class Order: ObservableObject, Codable {
     
     /// Through such computed properties we can introduce validations alongside data
     var hasValidAddress: Bool {
-        if(name.isEmpty || street.isEmpty || city.isEmpty || zip.isEmpty) {
+        if(name.isEmptyConsideringWhitespaces || street.isEmptyConsideringWhitespaces || city.isEmptyConsideringWhitespaces || zip.isEmptyConsideringWhitespaces) {
             return false
         }
         return true
