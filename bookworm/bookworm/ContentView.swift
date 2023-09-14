@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var books: FetchedResults<Book>
+    /// You can have several sort descriptors, swift uses first to sort, but if two have same value for first descriptor then second one is used to fix the draw.
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.title),
+        SortDescriptor(\.author)
+    ]) var books: FetchedResults<Book>
     
     @State private var showAddView = false
     var body: some View {
@@ -18,11 +22,12 @@ struct ContentView: View {
                 List {
                     ForEach(books) { book in
                         NavigationLink {
-                            Text(book.title ?? "Unknown Title")
+                            DetailView(book: book)
                         } label: {
                             HStack {
                                 Image(systemName: "book")
                                     .font(.largeTitle)
+                                    .foregroundStyle(book.rating == 1 ? .red: .black)
 
                                 VStack(alignment: .leading) {
                                     Text(book.title ?? "Unknown Title")
@@ -31,8 +36,10 @@ struct ContentView: View {
                                         .foregroundColor(.secondary)
                                 }
                             }
+                            .badge(Text("\(Image(systemName: "star.fill")) \(book.rating)"))
                         }
-                    }
+                        
+                    }.onDelete(perform: handleDeleteBook)
                 }
             }
             .navigationTitle("Bookworm")
@@ -44,12 +51,24 @@ struct ContentView: View {
                         Image(systemName: "plus")
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
             }
             .sheet(isPresented: $showAddView) {
                 AddBookView()
             }
         }
-
+    }
+    
+    func handleDeleteBook(at offsets: IndexSet) {
+        for offset in offsets {
+            let book = books[offset]
+            moc.delete(book)
+        }
+        
+        try? moc.save()
     }
 }
 

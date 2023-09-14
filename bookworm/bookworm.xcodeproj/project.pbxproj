@@ -11,6 +11,7 @@
 		7502C2262AA9945A00797F76 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7502C2242AA9945A00797F76 /* Bookworm.xcdatamodeld */; };
 		7502C2282AA9962400797F76 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7502C2272AA9962400797F76 /* AddBookView.swift */; };
 		7502C22A2AA99BE100797F76 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7502C2292AA99BE100797F76 /* RatingsView.swift */; };
+		75DD0F1D2AB3A10F00001542 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0F1C2AB3A10F00001542 /* DetailView.swift */; };
 		97B59F8B2AA1A83D005E6C2A /* bookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B59F8A2AA1A83D005E6C2A /* bookwormApp.swift */; };
 		97B59F8D2AA1A83D005E6C2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B59F8C2AA1A83D005E6C2A /* ContentView.swift */; };
 		97B59F8F2AA1A83F005E6C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B59F8E2AA1A83F005E6C2A /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		7502C2252AA9945A00797F76 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
 		7502C2272AA9962400797F76 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		7502C2292AA99BE100797F76 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		75DD0F1C2AB3A10F00001542 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		97B59F872AA1A83D005E6C2A /* bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B59F8A2AA1A83D005E6C2A /* bookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookwormApp.swift; sourceTree = "<group>"; };
 		97B59F8C2AA1A83D005E6C2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				7502C2222AA9940D00797F76 /* DataController.swift */,
 				7502C2242AA9945A00797F76 /* Bookworm.xcdatamodeld */,
 				97B59F8C2AA1A83D005E6C2A /* ContentView.swift */,
+				75DD0F1C2AB3A10F00001542 /* DetailView.swift */,
 				7502C2272AA9962400797F76 /* AddBookView.swift */,
 				97B59F8E2AA1A83F005E6C2A /* Assets.xcassets */,
 				97B59F902AA1A83F005E6C2A /* Preview Content */,
@@ -152,6 +155,7 @@
 				97B59F8D2AA1A83D005E6C2A /* ContentView.swift in Sources */,
 				7502C22A2AA99BE100797F76 /* RatingsView.swift in Sources */,
 				7502C2262AA9945A00797F76 /* Bookworm.xcdatamodeld in Sources */,
+				75DD0F1D2AB3A10F00001542 /* DetailView.swift in Sources */,
 				7502C2232AA9940D00797F76 /* DataController.swift in Sources */,
 				97B59F8B2AA1A83D005E6C2A /* bookwormApp.swift in Sources */,
 				7502C2282AA9962400797F76 /* AddBookView.swift in Sources */,

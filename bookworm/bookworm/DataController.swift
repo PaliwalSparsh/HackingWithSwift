@@ -16,7 +16,7 @@ class DataController: ObservableObject {
         // We load the datamodel using loadPersistentStores
         container.loadPersistentStores { description, error in
             if let error = error {
-                print("Core data failed to load")
+                print("Core data failed to load \(error.localizedDescription)")
             }
         }
     }

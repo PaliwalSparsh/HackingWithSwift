@@ -26,7 +26,7 @@ struct RatingsView: View {
 
 struct RatingsView_Previews: PreviewProvider {
     static var previews: some View {
-        // .constant can be used in previews to quickly add a binding
+        // .constant binding are great for prototyping, their values cannot be changed by users.
         RatingsView(rating: .constant(4))
     }
 }
