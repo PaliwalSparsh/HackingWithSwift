@@ -7,30 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75DD0F502ABA9AF300001542 /* instafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0F4F2ABA9AF300001542 /* instafilterApp.swift */; };
-		75DD0F522ABA9AF300001542 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0F512ABA9AF300001542 /* ContentView.swift */; };
-		75DD0F542ABA9AF400001542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DD0F532ABA9AF400001542 /* Assets.xcassets */; };
-		75DD0F572ABA9AF400001542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DD0F562ABA9AF400001542 /* Preview Assets.xcassets */; };
-		75DD0F5E2ABA9EFF00001542 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0F5D2ABA9EFF00001542 /* LearnView.swift */; };
-		75DD0F952ABFB9E100001542 /* PickerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0F942ABFB9E100001542 /* PickerMainView.swift */; };
-		75DD0F972ABFBA7800001542 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0F962ABFBA7800001542 /* ImagePicker.swift */; };
-		75DD0F9C2ABFBD2100001542 /* CILearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0F9B2ABFBD2100001542 /* CILearnView.swift */; };
+		75DD0FAA2AC0DF5700001542 /* ChallengeSixtyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FA92AC0DF5700001542 /* ChallengeSixtyApp.swift */; };
+		75DD0FAC2AC0DF5700001542 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FAB2AC0DF5700001542 /* ContentView.swift */; };
+		75DD0FAE2AC0DF5900001542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DD0FAD2AC0DF5900001542 /* Assets.xcassets */; };
+		75DD0FB12AC0DF5900001542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DD0FB02AC0DF5900001542 /* Preview Assets.xcassets */; };
+		75DD0FB82AC0DFF600001542 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FB72AC0DFF600001542 /* User.swift */; };
+		75DD0FBA2AC0DFFD00001542 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FB92AC0DFFD00001542 /* Friend.swift */; };
+		75DD0FBC2AC0E6B500001542 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FBB2AC0E6B500001542 /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		75DD0F4C2ABA9AF300001542 /* instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		75DD0F4F2ABA9AF300001542 /* instafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instafilterApp.swift; sourceTree = "<group>"; };
-		75DD0F512ABA9AF300001542 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		75DD0F532ABA9AF400001542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		75DD0F562ABA9AF400001542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		75DD0F5D2ABA9EFF00001542 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
-		75DD0F942ABFB9E100001542 /* PickerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerMainView.swift; sourceTree = "<group>"; };
-		75DD0F962ABFBA7800001542 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		75DD0F9B2ABFBD2100001542 /* CILearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CILearnView.swift; sourceTree = "<group>"; };
+		75DD0FA62AC0DF5700001542 /* ChallengeSixty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeSixty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DD0FA92AC0DF5700001542 /* ChallengeSixtyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeSixtyApp.swift; sourceTree = "<group>"; };
+		75DD0FAB2AC0DF5700001542 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		75DD0FAD2AC0DF5900001542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75DD0FB02AC0DF5900001542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75DD0FB72AC0DFF600001542 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		75DD0FB92AC0DFFD00001542 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		75DD0FBB2AC0E6B500001542 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		75DD0F492ABA9AF300001542 /* Frameworks */ = {
+		75DD0FA32AC0DF5700001542 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,89 +38,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		75DD0F432ABA9AF300001542 = {
+		75DD0F9D2AC0DF5700001542 = {
 			isa = PBXGroup;
 			children = (
-				75DD0F4E2ABA9AF300001542 /* instafilter */,
-				75DD0F4D2ABA9AF300001542 /* Products */,
+				75DD0FA82AC0DF5700001542 /* ChallengeSixty */,
+				75DD0FA72AC0DF5700001542 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		75DD0F4D2ABA9AF300001542 /* Products */ = {
+		75DD0FA72AC0DF5700001542 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75DD0F4C2ABA9AF300001542 /* instafilter.app */,
+				75DD0FA62AC0DF5700001542 /* ChallengeSixty.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		75DD0F4E2ABA9AF300001542 /* instafilter */ = {
+		75DD0FA82AC0DF5700001542 /* ChallengeSixty */ = {
 			isa = PBXGroup;
 			children = (
-				75DD0F4F2ABA9AF300001542 /* instafilterApp.swift */,
-				75DD0F512ABA9AF300001542 /* ContentView.swift */,
-				75DD0F982ABFBC6400001542 /* Picker */,
-				75DD0F5D2ABA9EFF00001542 /* LearnView.swift */,
-				75DD0F9B2ABFBD2100001542 /* CILearnView.swift */,
-				75DD0F532ABA9AF400001542 /* Assets.xcassets */,
-				75DD0F552ABA9AF400001542 /* Preview Content */,
+				75DD0FA92AC0DF5700001542 /* ChallengeSixtyApp.swift */,
+				75DD0FBB2AC0E6B500001542 /* UserDetailView.swift */,
+				75DD0FAB2AC0DF5700001542 /* ContentView.swift */,
+				75DD0FB72AC0DFF600001542 /* User.swift */,
+				75DD0FB92AC0DFFD00001542 /* Friend.swift */,
+				75DD0FAD2AC0DF5900001542 /* Assets.xcassets */,
+				75DD0FAF2AC0DF5900001542 /* Preview Content */,
 			);
-			path = instafilter;
+			path = ChallengeSixty;
 			sourceTree = "<group>";
 		};
-		75DD0F552ABA9AF400001542 /* Preview Content */ = {
+		75DD0FAF2AC0DF5900001542 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				75DD0F562ABA9AF400001542 /* Preview Assets.xcassets */,
+				75DD0FB02AC0DF5900001542 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		75DD0F982ABFBC6400001542 /* Picker */ = {
-			isa = PBXGroup;
-			children = (
-				75DD0F942ABFB9E100001542 /* PickerMainView.swift */,
-				75DD0F962ABFBA7800001542 /* ImagePicker.swift */,
-			);
-			path = Picker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		75DD0F4B2ABA9AF300001542 /* instafilter */ = {
+		75DD0FA52AC0DF5700001542 /* ChallengeSixty */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75DD0F5A2ABA9AF400001542 /* Build configuration list for PBXNativeTarget "instafilter" */;
+			buildConfigurationList = 75DD0FB42AC0DF5900001542 /* Build configuration list for PBXNativeTarget "ChallengeSixty" */;
 			buildPhases = (
-				75DD0F482ABA9AF300001542 /* Sources */,
-				75DD0F492ABA9AF300001542 /* Frameworks */,
-				75DD0F4A2ABA9AF300001542 /* Resources */,
+				75DD0FA22AC0DF5700001542 /* Sources */,
+				75DD0FA32AC0DF5700001542 /* Frameworks */,
+				75DD0FA42AC0DF5700001542 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = instafilter;
-			productName = instafilter;
-			productReference = 75DD0F4C2ABA9AF300001542 /* instafilter.app */;
+			name = ChallengeSixty;
+			productName = ChallengeSixty;
+			productReference = 75DD0FA62AC0DF5700001542 /* ChallengeSixty.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		75DD0F442ABA9AF300001542 /* Project object */ = {
+		75DD0F9E2AC0DF5700001542 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					75DD0F4B2ABA9AF300001542 = {
+					75DD0FA52AC0DF5700001542 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 75DD0F472ABA9AF300001542 /* Build configuration list for PBXProject "instafilter" */;
+			buildConfigurationList = 75DD0FA12AC0DF5700001542 /* Build configuration list for PBXProject "ChallengeSixty" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,46 +119,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 75DD0F432ABA9AF300001542;
-			productRefGroup = 75DD0F4D2ABA9AF300001542 /* Products */;
+			mainGroup = 75DD0F9D2AC0DF5700001542;
+			productRefGroup = 75DD0FA72AC0DF5700001542 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				75DD0F4B2ABA9AF300001542 /* instafilter */,
+				75DD0FA52AC0DF5700001542 /* ChallengeSixty */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		75DD0F4A2ABA9AF300001542 /* Resources */ = {
+		75DD0FA42AC0DF5700001542 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75DD0F572ABA9AF400001542 /* Preview Assets.xcassets in Resources */,
-				75DD0F542ABA9AF400001542 /* Assets.xcassets in Resources */,
+				75DD0FB12AC0DF5900001542 /* Preview Assets.xcassets in Resources */,
+				75DD0FAE2AC0DF5900001542 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		75DD0F482ABA9AF300001542 /* Sources */ = {
+		75DD0FA22AC0DF5700001542 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75DD0F522ABA9AF300001542 /* ContentView.swift in Sources */,
-				75DD0F9C2ABFBD2100001542 /* CILearnView.swift in Sources */,
-				75DD0F952ABFB9E100001542 /* PickerMainView.swift in Sources */,
-				75DD0F972ABFBA7800001542 /* ImagePicker.swift in Sources */,
-				75DD0F5E2ABA9EFF00001542 /* LearnView.swift in Sources */,
-				75DD0F502ABA9AF300001542 /* instafilterApp.swift in Sources */,
+				75DD0FAC2AC0DF5700001542 /* ContentView.swift in Sources */,
+				75DD0FAA2AC0DF5700001542 /* ChallengeSixtyApp.swift in Sources */,
+				75DD0FB82AC0DFF600001542 /* User.swift in Sources */,
+				75DD0FBC2AC0E6B500001542 /* UserDetailView.swift in Sources */,
+				75DD0FBA2AC0DFFD00001542 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		75DD0F582ABA9AF400001542 /* Debug */ = {
+		75DD0FB22AC0DF5900001542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,7 +217,7 @@
 			};
 			name = Debug;
 		};
-		75DD0F592ABA9AF400001542 /* Release */ = {
+		75DD0FB32AC0DF5900001542 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -283,14 +271,14 @@
 			};
 			name = Release;
 		};
-		75DD0F5B2ABA9AF400001542 /* Debug */ = {
+		75DD0FB52AC0DF5900001542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"instafilter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChallengeSixty/Preview Content\"";
 				DEVELOPMENT_TEAM = HMFDPX66GU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -304,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.discoman.instafilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.discoman.ChallengeSixty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,14 +300,14 @@
 			};
 			name = Debug;
 		};
-		75DD0F5C2ABA9AF400001542 /* Release */ = {
+		75DD0FB62AC0DF5900001542 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"instafilter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChallengeSixty/Preview Content\"";
 				DEVELOPMENT_TEAM = HMFDPX66GU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -333,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.discoman.instafilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.discoman.ChallengeSixty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -344,25 +332,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		75DD0F472ABA9AF300001542 /* Build configuration list for PBXProject "instafilter" */ = {
+		75DD0FA12AC0DF5700001542 /* Build configuration list for PBXProject "ChallengeSixty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75DD0F582ABA9AF400001542 /* Debug */,
-				75DD0F592ABA9AF400001542 /* Release */,
+				75DD0FB22AC0DF5900001542 /* Debug */,
+				75DD0FB32AC0DF5900001542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75DD0F5A2ABA9AF400001542 /* Build configuration list for PBXNativeTarget "instafilter" */ = {
+		75DD0FB42AC0DF5900001542 /* Build configuration list for PBXNativeTarget "ChallengeSixty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75DD0F5B2ABA9AF400001542 /* Debug */,
-				75DD0F5C2ABA9AF400001542 /* Release */,
+				75DD0FB52AC0DF5900001542 /* Debug */,
+				75DD0FB62AC0DF5900001542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 75DD0F442ABA9AF300001542 /* Project object */;
+	rootObject = 75DD0F9E2AC0DF5700001542 /* Project object */;
 }
