@@ -14,6 +14,8 @@
 		75DD0FB82AC0DFF600001542 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FB72AC0DFF600001542 /* User.swift */; };
 		75DD0FBA2AC0DFFD00001542 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FB92AC0DFFD00001542 /* Friend.swift */; };
 		75DD0FBC2AC0E6B500001542 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FBB2AC0E6B500001542 /* UserDetailView.swift */; };
+		75DD0FBF2AC3E24A00001542 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FBD2AC3E24A00001542 /* UserModel.xcdatamodeld */; };
+		75DD0FC12AC3E3D700001542 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DD0FC02AC3E3D700001542 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		75DD0FB72AC0DFF600001542 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		75DD0FB92AC0DFFD00001542 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		75DD0FBB2AC0E6B500001542 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		75DD0FBE2AC3E24A00001542 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
+		75DD0FC02AC3E3D700001542 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				75DD0FA92AC0DF5700001542 /* ChallengeSixtyApp.swift */,
 				75DD0FBB2AC0E6B500001542 /* UserDetailView.swift */,
 				75DD0FAB2AC0DF5700001542 /* ContentView.swift */,
+				75DD0FBD2AC3E24A00001542 /* UserModel.xcdatamodeld */,
+				75DD0FC02AC3E3D700001542 /* DataController.swift */,
 				75DD0FB72AC0DFF600001542 /* User.swift */,
 				75DD0FB92AC0DFFD00001542 /* Friend.swift */,
 				75DD0FAD2AC0DF5900001542 /* Assets.xcassets */,
@@ -146,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DD0FC12AC3E3D700001542 /* DataController.swift in Sources */,
 				75DD0FAC2AC0DF5700001542 /* ContentView.swift in Sources */,
 				75DD0FAA2AC0DF5700001542 /* ChallengeSixtyApp.swift in Sources */,
+				75DD0FBF2AC3E24A00001542 /* UserModel.xcdatamodeld in Sources */,
 				75DD0FB82AC0DFF600001542 /* User.swift in Sources */,
 				75DD0FBC2AC0E6B500001542 /* UserDetailView.swift in Sources */,
 				75DD0FBA2AC0DFFD00001542 /* Friend.swift in Sources */,
@@ -351,6 +359,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		75DD0FBD2AC3E24A00001542 /* UserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				75DD0FBE2AC3E24A00001542 /* UserModel.xcdatamodel */,
+			);
+			currentVersion = 75DD0FBE2AC3E24A00001542 /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 75DD0F9E2AC0DF5700001542 /* Project object */;
 }

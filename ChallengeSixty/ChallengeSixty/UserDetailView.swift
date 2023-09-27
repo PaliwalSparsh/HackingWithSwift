@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct UserDetailView: View {
-    var user: User
+    var users: FetchedResults<CachedUsers>
+    var userIndex: Int
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(user.email)
+            Text(users[userIndex].email ?? "Unknown")
                 .font(.body.bold())
-            Text(user.registered.formatted(date: .complete, time: .shortened))
-                .font(.subheadline)
-            Text(user.about)
+            Text(users[userIndex].about ?? "Unknown")
                 .font(.body)
-            ForEach(user.friends, id: \.id) { friend in
-                Text(friend.name)
-            }
+//            ForEach(users[userIndex].friends, id: \.id) { friend in
+//                Text(friend.name)
+//            }
             Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .navigationTitle(user.name)
+        .navigationTitle(users[userIndex].name ?? "Unknown")
     }
 }
+
+
+///             Text(users[userIndex]?.registered.formatted(date: .complete, time: .shortened) ?? "Unknown").font(.subheadline)
