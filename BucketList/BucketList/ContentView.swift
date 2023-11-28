@@ -14,14 +14,11 @@ import SwiftUI
 // using enums for showing varied states
 
 struct ContentView: View {
-    @State var locations: [Location] = []
-    @State var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 50), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
-    
-    @State var selectedLocation: Location? = nil
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $mapRegion, annotationItems: locations) {
+            Map(coordinateRegion: $viewModel.mapRegion, annotationItems: viewModel.locations) {
                 location in
                 /// if you don't want to create your own annotation just use MapMarker.
                 MapAnnotation(coordinate: location.coordinate) {
@@ -36,11 +33,9 @@ struct ContentView: View {
                         Text(location.name)
                     }                
                     .onTapGesture {
-                        selectedLocation = location
+                        viewModel.selectedLocation = location
                     }
                 }
-
-                    
             }.ignoresSafeArea()
             Circle()
                 .fill(.blue)
@@ -51,7 +46,7 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Button {
-                        locations.append(Location(id: UUID(), name: "New location", description: "", longitude: mapRegion.center.longitude, latitude: mapRegion.center.latitude))
+                        viewModel.addLocation()
                     } label: {
                         Image(systemName: "plus")
                             .foregroundStyle(.white)
@@ -62,12 +57,10 @@ struct ContentView: View {
                 }
             }
         }
-        .sheet(item: $selectedLocation) { place in
-            EditView(location: place, onSave: { newLocation in
-                if let index = locations.firstIndex(of: place) {
-                    locations[index] = newLocation
-                }
-            })
+        .sheet(item: $viewModel.selectedLocation) { place in
+            EditView(location: place) {
+                viewModel.update(location: $0)
+            }
         }
     }
 }
