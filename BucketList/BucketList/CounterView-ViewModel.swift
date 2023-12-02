@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import LocalAuthentication
 
 extension ContentView {
     /// Using @MainActor we are insuring this class runs on main actor, obviously we need to do this, because we want UI update logic works on main thread
@@ -14,6 +15,8 @@ extension ContentView {
         @Published var locations: [Location] = []
         @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 50), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
         @Published var selectedLocation: Location? = nil
+        @Published var isUnlocked = false
+
         /// We get document directory and append the name of the new file we want to created
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
 
@@ -52,5 +55,21 @@ extension ContentView {
             }
             save()
         }
+        
+        func authenticate() {
+            let context = LAContext()
+            let reason = "Please authenticate yourself to unlock your places."
+
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, error in
+                if (success) {
+                    Task { @MainActor in
+                        self.isUnlocked = true
+                    }
+                } else {
+                    print("auth failed")
+                }
+            }
+        }
     }
 }
+
