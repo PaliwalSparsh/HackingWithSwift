@@ -50,11 +50,13 @@ struct ContentView: View {
                             viewModel.addLocation()
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundStyle(.white)
-                                .frame(width: 48, height: 48)
-                                .background(.black.gradient)
-                                .clipShape(Circle())
-                        }.padding()
+                        }
+                        .padding()
+                        .foregroundStyle(.white)
+                        .frame(width: 48, height: 48)
+                        .background(.black.gradient)
+                        .clipShape(Circle())
+
                     }
                 }
         } else {
@@ -66,11 +68,15 @@ struct ContentView: View {
             .foregroundColor(.white)
             .clipShape(Capsule())
         }
-    }.sheet(item: $viewModel.selectedLocation) { place in
-        EditView(location: place) {
-            viewModel.update(location: $0)
-        }
     }
+        .sheet(item: $viewModel.selectedLocation) { place in
+            EditView(location: place) {
+                viewModel.update(location: $0)
+            }
+        }
+        .alert(viewModel.errorMessage, isPresented: $viewModel.showError) {
+            Button("OK", role: .cancel) {}
+        }
     }
 }
 

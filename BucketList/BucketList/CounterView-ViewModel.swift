@@ -16,6 +16,8 @@ extension ContentView {
         @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 50), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
         @Published var selectedLocation: Location? = nil
         @Published var isUnlocked = false
+        @Published var errorMessage = ""
+        @Published var showError = false
 
         /// We get document directory and append the name of the new file we want to created
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
@@ -60,13 +62,14 @@ extension ContentView {
             let context = LAContext()
             let reason = "Please authenticate yourself to unlock your places."
 
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, error in
-                if (success) {
-                    Task { @MainActor in
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, error in
+                Task { @MainActor in
+                    if (success) {
                         self.isUnlocked = true
+                    } else {
+                        self.showError = true
+                        self.errorMessage = "auth failed"
                     }
-                } else {
-                    print("auth failed")
                 }
             }
         }
